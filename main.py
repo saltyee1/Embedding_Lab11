@@ -233,7 +233,7 @@ def argmax(arr_x):
 
 # 定義SD卡路徑和檔案名
 drive_path = "/sd/weights"
-file_name = "weights_only_40.txt"
+file_name = "weights_only_70.txt"
 file_path = drive_path + "/" + file_name  # 手動建立檔案路徑
 # 主程序
 if __name__ == "__main__":
@@ -290,7 +290,7 @@ ytrue = [1]*40 + [0]*40
 print(len(ytrue))
 Xtest=transpose(Xtest)
 #Transpose Xtest before feeding to NN
-yout1 = dense(40, Xtest, w1, b1, 'relu') #input layer with 4 neuron
+yout1 = dense(70, Xtest, w1, b1, 'relu') #input layer with 4 neuron
 
 ypred = dense(2, yout1, w2, b2,'softmax') #output layer
 ypred=transpose(ypred)
